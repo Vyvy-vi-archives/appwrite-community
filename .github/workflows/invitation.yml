@@ -1,0 +1,17 @@
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  automate_invite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite to the Github Org
+        uses: vj-abigo/invite-on-label@v1.2
+        with:
+          organization: appwrite
+          label: Invite me to the org
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          comment: '<b>Invitation sent for the GitHub Organisation. Welcome to the community 🎉</b><br><br>You could make this public to have the membership show up on your profile.<br>Join our discord server to interact more with us, over here - https://discord.gg/GSeTUeA'
+        env:
+          INVITE_TOKEN: ${{ secrets.INVITE_TOKEN }}

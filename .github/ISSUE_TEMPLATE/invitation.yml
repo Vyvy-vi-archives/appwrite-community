@@ -1,0 +1,32 @@
+name: Invitation to the GitHub Community Organization
+description: I would like to be part of the awesome community
+title: "I would like to be a part of appwrite's github org"
+labels: [Invite me to the org]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Insert your name here
+    validations:
+      required: true
+  - type: input
+    id: discordname
+    attributes:
+      label: Discord Username (if applicable)
+      placeholder: Insert your Discord username here
+    validations:
+      required: false
+  - type: textarea
+    id: Additional
+    attributes:
+      label: Additional Context
+      description: Where did you find about appwrite? 
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        You can also join our Discord community [here](https://discord.gg/GSeTUeA)
+
+
